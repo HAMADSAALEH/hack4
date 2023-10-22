@@ -36,3 +36,9 @@ printf("%d\t\t$%.2f\t\t$%.2f\n", month, monthly_interest, balance);
   printf("Total Nest Egg: $%.2f\n", balance);
 }
 
+int main(int argc, char *argv[]) {
+  // Validate the input
+  if (argc != 6) {
+    printf("Usage: ./retire initial_balance monthly_contribution annual_rate_of_return annual_rate_of_inflation number_of_years\n");
+    return 1;
+  }
