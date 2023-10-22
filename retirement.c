@@ -29,4 +29,10 @@ void print_amortization_table(double initial_balance, double monthly_contributio
     double monthly_interest = calculate_monthly_interest(balance, monthly_interest_rate);
     balance = calculate_new_balance(balance, monthly_contribution, monthly_interest);
 
+printf("%d\t\t$%.2f\t\t$%.2f\n", month, monthly_interest, balance);
+  }
+
+  printf("Total Interest Earned: $%.2f\n", balance - initial_balance);
+  printf("Total Nest Egg: $%.2f\n", balance);
+}
 
