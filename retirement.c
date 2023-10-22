@@ -42,3 +42,15 @@ int main(int argc, char *argv[]) {
     printf("Usage: ./retire initial_balance monthly_contribution annual_rate_of_return annual_rate_of_inflation number_of_years\n");
     return 1;
   }
+    // Parse the input
+  double initial_balance = atof(argv[1]);
+  double monthly_contribution = atof(argv[2]);
+  double annual_rate_of_return = atof(argv[3]);
+  double annual_rate_of_inflation = atof(argv[4]);
+  int number_of_years = atoi(argv[5]);
+
+  // Print the amortization table
+  print_amortization_table(initial_balance, monthly_contribution, annual_rate_of_return, annual_rate_of_inflation, number_of_years);
+
+  return 0;
+}
